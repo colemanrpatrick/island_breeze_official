@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Kaushan+Script" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="user-scalable = yes, width=320, initial-scale=1">
+    <title>island breeze luau</title>
+  </head>
+  <body>
+    <!-- =========================== -->
+    <main>
+    <div class="masthead-fixed">
+      <div class="masthead-relative">
+        <div class="logo">
+          <img src="images/islandbreezeluau-logo.png" alt="">
+        </div>
+        <div class="phone" id="phone">
+          <a href="#"><i class="material-icons">phone</i> 1-866-482-9775</a>
+        </div>
+        <div class="main-nav" id="main-nav">
+          <a href="#">menu</a>
+          <a href="#">location</a>
+          <a hreft="#">royal court</a>
+          <a href="#">reservations</a>
+          <a href="#">gallery</a>
+          <a href="#">luau photos</a>
+          <a href="#">faq</a>
+          <a href="#">contact</a>
+        </div>
+        <ul class="btn-container">
+          <li id="first-btn">
+            <a href="#"><i class="material-icons">shopping_cart</i></a>
+          </li>
+          <li id="second-btn">
+            <button class="menu-btn" id="menu-btn" type="button" name="button" onclick="idToggle('main-nav','active');idToggle('menu-btn','active')">
+              <hr class="menu-btn-hr-1"/>
+              <hr class="menu-btn-hr-2"/>
+              <hr class="menu-btn-hr-3"/>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <!-- =========================== -->
+    <div id="checkpoint-first">
+      <div id="banner">
+        <div id="banner-box">
+          <header>
+            <h1>Island Breeze's Newest Production</h1>
+            <h2>He 'Ohana Kakou" (We are ‘Ohana)</h2>
+            <a href="#">reservations</a>
+          </header>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div class="checkpoint">
+      <div class="content-box">
+      <hr>
+      <ul>
+        <li class="ib-img">
+        <div id="playerWrapper">
+          <div id="player"></div>
+        </div>
+
+      <script>
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          host: 'https://www.youtube.com',
+          rel: '0',
+          videoId: 'h8GwBI3T1AU',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          },
+          playerVars: {
+            rel:0,
+            showInfo:0
+          }
+        });
+      }
+      function onPlayerReady(event) {
+        player.mute();
+        event.target.playVideo();
+      }
+
+      function onPlayerStateChange(event) {
+        if(player.getPlayerState() === 0){
+          console.log("ended");
+        }
+        if(player.getPlayerState() === 2){
+          console.log("paused");
+          $('.ytp-button.ytp-collapse').click();
+
+        }
+      }
+      </script>
+        </li>
+        <li>
+          <article>
+          <header>"...Best of West Hawai'i" since 2000"</header>
+          <p>Experience an evening of delicious food and authentic Polynesian entertainment. Held under the stars on the shores of Kamakahonu Bay and Ahu'ena – Kamehameha the Great’s former estate in Kailua-Kona, the Island Breeze Lū'au has been named "Best of West Hawai'i" since 2000.</p>
+          </article>
+        </li>
+      </ul>
+      <hr>
+      </div>
+    </div>
+    <div class="checkpoint">
+      <div class="content-box" id="ib-1">
+        <hr>
+        <ul>
+          <li>
+          <article>
+            <header>the luau</header>
+            <p>The evening begins with a warm welcome and an opportunity to meet the performers, while learning traditional arts & crafts. Watch the "Kalua'ana o ka Pua'a", the uncovering of the imu (underground oven), and savor the lavish Hawaiian buffet with local favorites including kalua pork, fresh fish, grilled beef and fresh island produce all combined with an open bar.</p>
+            <a href="#"><a href="#">menu</a></a>
+          </article>
+          </li>
+          <li class="ib-img"><span></span></li>
+        </ul>
+        <hr>
+      </div>
+    </div>
+    <br>
+    <div class="checkpoint">
+      <div class="content-box" id="ib-2">
+        <hr>
+        <ul>
+          <li class="ib-img"><span></span></li>
+          <li>
+            <article>
+              <header>location</header>
+              <p>Island Breeze Lū’au is held under the stars, on the historic grounds of the Courtyard Marriott King Kamehameha's Kona Beach Hotel. The hotel is located adjacent to the pier in Kailua Bay, on Palani Road in Kailua-Kona.  It is within walking distance of many restaurants, shops and historical sites such as Hulihe’e Palace and Moku’aikauwa Church in Kailua-Kona. The lū’au is easily accessible from the Kohala Coast Resort area to the north and the Sheraton Kona Resort & Spa at Keauhou Bay to the south.</p><a href="#">location</a>
+            </article>
+          </li>
+        </ul>
+        <hr>
+      </div>
+    </div>
+    <br>
+    <div class="checkpoint">
+      <div class="content-box" id="ib-3">
+        <hr>
+        <ul>
+          <li>
+          <article>
+          <header>the show</header>
+          <p><!--There is nothing more important in Hawai'i than 'ohana (family). The word “Ohana” is translated to “offshoots”, meaning the new shoots on the halo (taro) plant. We are offshoots forever connected to each other by our common root. Stories and cultural practices were passed down within families so that today we can honor our ‘Ohana and share its beauty.-->
+            (something about the review) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+          </p>
+          </article>
+          </li>
+          <li class="ib-img"><span></span></li>
+        </ul>
+        <hr>
+      </div>
+    </div>
+    <br>
+    <div class="checkpoint">
+      <div class="content-box">
+        <hr>
+        <ul>
+          <li>
+            <article>
+              <header>join us as we celebrate 'ohana</header>
+              <p>Meet our Polynesian cousins from Samoa, Tahiti & New Zealand. Hear our stories through song & dance as we present the splendor and beauty of this land we call paradise.</p>
+            </article>
+          </li>
+        </ul>
+        <hr>
+      </div>
+    </div>
+  </br>
+      <div class="coverage-section">
+        <br>
+        <h4>Check-in Desk & Parking</h4>
+        <article>
+        <p>The Island Breeze Lū'au reservation desk is located in the lobby of the Courtyard Marriott King Kamehameha's Kona Beach Hotel. Vouchers must be turned in for lū'au tickets at the lū'au desk. Guests must have tickets to be admitted to the lū'au. Ample parking is available at the Courtyard Marriott King Kamehameha's Kona Beach Hotel. Validation is given at the lū'au desk and during the lū'au.</p>
+        <p>Book Online or Call us at 866-482-9775.</p>
+        </article>
+        <br>
+        <h4>trip advisor reviews</h4>
+        <br>
+        <div class="coverage-box">
+          <ul>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+          </ul>
+          <header>officia deserunt mollit anim id est laborum. </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</p>
+          <p><span>Date of experience:</span>month year</p>
+        </div>
+        <br>
+        <div class="coverage-box">
+          <ul>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+          </ul>
+          <header>officia deserunt mollit anim id est laborum. </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</p>
+            <p><span>Date of experience:</span>month year</p>
+        </div>
+        <br>
+        <div class="coverage-box">
+          <ul>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+            <li><i class="material-icons">radio_button_checked</i></li>
+          </ul>
+          <header>officia deserunt mollit anim id est laborum. </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</p>
+          <p><span>Date of experience:</span>month year</p>
+        </div>
+
+        <div id="TA_certificateOfExcellence807" class="TA_certificateOfExcellence">
+          <ul id="IvJjWSfmw" class="TA_links f161nRw7bo">
+            <li id="IYOSfK3k" class="aVoKmPoM0YF">
+              <a target="_blank" href="http://www.tripadvisor.com/">
+                <img src="https://www.tripadvisor.com/img/cdsi/img2/awards/CoE2014_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a>
+              </li>
+            </ul>
+          </div>
+          <script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=807&locationId=2058245&lang=en_US&year=2014"></script>
+      </div>
+  <!-- =========================== -->
+      <footer>
+        <ul>
+          <li class="footer-left">
+            <header>
+              contact us!
+            </header>
+            <p>Ka'anapali Beach Club</br>
+            104 Ka'anapali Shores Place</br>
+            Lahaina, Maui, Hawaii 96761
+          </br>
+          <a href="#">888-582-8858</a>
+          </p>
+          </li>
+          <li class="footer-center">
+            <header>
+              follow us!
+            </header></br>
+            <a href="#"> <img src="images/fb.png" alt=""> </a>
+          </li>
+          <li class="footer-right">
+            <a href="#">privacy policy</a></br>
+            <a href="#">site map</a></br>
+            <a href="#">FAQ</a></br>
+            <a href="#">terms and conditions</a></br>
+          </li>
+        </ul>
+      </footer>
+<!-- =========================== -->
+    </main>
+    <!-- =========================== -->
+    <script type="text/javascript" src="checkpoint.js"></script>
+    <script type="text/javascript" src="toggle.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

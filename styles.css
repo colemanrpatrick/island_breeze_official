@@ -1,0 +1,726 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+*:not(.fa){
+  font-family: 'Oswald',sans-serif;
+}
+a{
+  text-decoration: none !important;
+}
+button:focus{
+}
+body{
+  position: relative;
+  overflow-x: hidden;
+}
+html{
+  scroll-behavior: smooth;
+}
+main{
+  width:1500px;
+  margin: 0 auto;
+}
+@media(max-width:1500px){
+  main{
+    width: 100%;
+  }
+}
+.checkpoint-first,.checkpoint{
+  margin: 0;
+  padding: 0;
+}
+/*=======================*/
+.masthead-fixed{
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+}
+.masthead-relative {
+  width: 1500px;
+  height: 8em;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+  background-color: #168641e8;
+  font-size: 18px;
+}
+.masthead-fixed{
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+}
+@media(max-width:1550px){
+  .masthead-relative{
+    width: 100%;
+  }
+}
+#main-nav {
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  width: 20em;
+  background-color: rgba(255, 255, 255, 0.94);
+  height: 0;
+  right: 0;
+  text-align: center;
+  box-shadow: inset 0px 24px 15px -25px rgba(0,0,0,0.5),0px 15px 15px -10px rgba(0,0,0,0.5);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 999;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  height: 26em;
+}
+#main-nav.active{
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+#main-nav a {
+  display:block;
+  color:#168641;
+  font-weight: 300;
+  font-size: 1.25em;
+  text-transform: capitalize;
+  padding: 0.5em;
+}
+.btn-container {
+  position: absolute;
+  right: 0;
+  bottom: 1em;
+  display: table;
+}
+.btn-container li{
+  display: table-cell;
+  width: 50%;
+  padding: 1em;
+  position: relative;
+  vertical-align: middle;
+}
+#first-btn{
+  text-align: center;
+}
+#second-btn{
+  text-align: center;
+}
+.btn-container li a{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-40%);
+          transform: translate(-50%,-40%);
+}
+.btn-container li a .material-icons {
+  font-size: 3em;
+  color: white;
+}
+.menu-btn {
+  width: 4em;
+  height: 3em;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background:transparent;
+  border: 0;
+  cursor: pointer;
+}
+.menu-btn hr {
+  display: block;
+  width: 100%;
+  height: 0.4em;
+  background-color: white;
+  border: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  cursor: pointer;
+}
+.menu-btn-hr-1{
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(0deg);
+          transform: translateX(-50%) rotate(0deg);
+}
+.menu-btn-hr-2{
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.menu-btn-hr-3{
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(0deg);
+          transform: translateX(-50%) rotate(0deg);
+}
+.menu-btn.active .menu-btn-hr-1{
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%) rotate(-45deg);
+          transform: translate(-50%,-50%) rotate(-45deg);
+}
+.menu-btn.active .menu-btn-hr-2{
+  opacity: 0;
+}
+.menu-btn.active .menu-btn-hr-3{
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%) rotate(45deg);
+          transform: translate(-50%,-50%) rotate(45deg);
+}
+.logo{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 0.5em;
+}
+.logo img{
+  height: 100%;
+}
+#phone {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.5em 1em;
+}
+#phone a{
+  font-size: 1.5em;
+  font-weight: 300;
+  color: white;
+}
+#phone a .material-icons {
+  font-size: 1em;
+}
+#phone a .material-icons {
+  font-size: 1.25em;
+}
+@media(max-width:1200px){
+  .masthead-relative{
+    font-size: 16px;
+  }
+}
+@media(max-width:1000px){
+  .masthead-relative{
+    font-size: 15px;
+  }
+}
+@media(max-width:850px){
+  .masthead-relative{
+    font-size: 14px;
+  }
+}
+@media(max-width:600px){
+  .masthead-relative{
+    font-size: 13px;
+  }
+}
+@media(max-width:500px){
+  .masthead-relative{
+    font-size: 11px;
+  }
+  .menu-btn {
+    width: 3em;
+    height: 2em;
+  }
+  #main-nav a {
+    font-size: 1.5em;
+  }
+  #main-nav {
+    width: 100%;
+  }
+  #main-nav {
+    height: 32em;
+  }
+}
+/*========================*/
+#banner{
+	width: 100%;
+	height: 38em;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+}
+#banner::before{
+  content: "";
+  background-image: url("images/islandbreezebackground.jpg");
+  background-size: cover;
+  background-position: 0% 33%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+#banner-box {
+  position: absolute;
+  width: 55em;
+  left: 50%;
+  bottom: 2em;
+  background-size: cover;
+  background-position: bottom;
+  box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.5);
+  background-image: url("images/Island-Breeze-Luau-banner.jpg");
+  z-index: 2;
+  text-align: center;
+  transition: 1s;
+  opacity: 0;
+}
+#banner a{
+  margin: 0.5em auto;
+  background-color: gold;
+  display: inline-block;
+  padding: 0.5em;
+  text-transform: capitalize;
+  font-family: "Kaushan Script";
+  color: darkgreen;
+  border-radius: 2em;
+  font-size: 1.75em;
+}
+#banner-box {
+  /*ie 9, opera mini*/
+  margin-left: auto;
+  margin-right: auto;
+}
+#banner-box {
+  -ms-transform: translateX(-50%) translateX(-100%);
+  -webkit-transform: translateX(-50%) translateX(-100%);
+  transform: translateX(-50%) translateX(-100%);
+}
+.checkpoint-first.active #banner-box{
+  /*ie 9, opera mini*/
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+}
+.checkpoint-first.active #banner-box{
+  opacity: 1;
+  -ms-transform: translateX(-50%) translateX(0%);
+  -webkit-transform: translateX(-50%) translateX(0%);
+  transform: translateX(-50%) translateX(0%);
+}
+#banner header {
+  margin-top: 13.75em;
+  background: -moz-linear-gradient(top, rgba(240,249,255,0) 0%,rgba(37, 139, 80, 0.83) 100%);
+  background: -webkit-linear-gradient(top, rgba(240,249,255,0) 0%,rgba(37, 139, 80, 0.83) 100%);
+  background: linear-gradient(to bottom, rgba(240,249,255,0) 0%,rgba(37, 139, 80, 0.83) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f0f9ff', endColorstr='#258b50',GradientType=0 );
+}
+#banner header h1{
+    text-shadow: 0px 2px 5px black;
+  font-family: "Kaushan Script";
+  color: white;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 3.25em;
+  line-height: 1em;
+}
+#banner header h2{
+  color: white;
+    text-shadow: 0px 2px 5px black;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 2em;
+}
+@media(max-width:1250px){
+  #banner-box{
+    width: 75%;
+  }
+}
+@media(max-width:1200px){
+  #banner{
+    font-size: 16px;
+  }
+}
+@media(max-width:1000px){
+  #banner{
+    font-size: 15px;
+  }
+}
+@media(max-width:850px){
+  #banner{
+    font-size: 14px;
+  }
+  #banner-box {
+    width: 100%;
+  }
+}
+@media(max-width:600px){
+  #banner-box {
+    background-size: 100%;
+    background-color: #168641;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  #banner header {
+    margin-top: 14.75em;
+    padding: 1em 0em;
+  }
+  #banner{
+    font-size: 12px;
+  }
+}
+@media(max-width:500px){
+  #banner {
+    font-size: 10px;
+  }
+}
+/*===============*/
+#playerWrapper {
+  width: 100%;
+  height: 16em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#playerWrapper {
+  top: 50%;
+  transform: translateY(-50%);
+}
+#player {
+  width: 100%;
+  height: 100%;
+}
+.checkpoint{
+  font-size: 18px;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.content-box{
+  width: 100%;
+  background-color: beige;
+  display: block;
+  transition: 1s;
+}
+.content-box{
+  margin-left: -100%; /*ie 9, opera mini*/
+}
+.content-box{
+  transform: translateX(-100%);
+}
+.checkpoint.active .content-box{
+  margin-left: -0%; /*ie 9, opera mini*/
+}
+.checkpoint.active .content-box{
+  transform: translateX(-0%);
+}
+.content-box hr{
+  background-image: url("images/border-h.png");
+  background-size: contain;
+  opacity: 0.5;
+  height: 3em;
+  width: 100%;
+  border: 0;
+}
+.content-box ul{
+  width: 100%;
+  margin: 0 auto;
+  background-color: beige;
+  display: table;
+  text-align: center;
+  transition: 1.5s;
+  padding: 3em 1em 3em 1em;
+}
+.content-box ul{
+  margin-left: -100%; /*ie 9, opera mini*/
+}
+.content-box ul{
+  transform: translateX(-100%);
+}
+.checkpoint.active .content-box ul{
+  margin-left: -0%; /*ie 9, opera mini*/
+}
+.checkpoint.active .content-box ul{
+  transform: translateX(-0%);
+}
+.content-box ul li {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  position: relative;
+  border-left: 2em solid beige;
+  border-right: 2em solid beige;
+  vertical-align: middle;
+}
+.content-box ul li:not(.ib-img){
+  width: 55%;
+}
+.ib-img{
+  width: 45%;
+}
+#ib-1 .ib-img span, #ib-2 .ib-img span, #ib-3 .ib-img span{
+  width: 100%;
+  height: 16em;
+  display: block;
+  background-size: cover;
+}
+#ib-1 .ib-img span{
+  background-image: url("images/island-breeze-banner3.jpg");
+}
+#ib-2 .ib-img span{
+  background-image: url("images/island-breeze-courtyard-mariot-kona.jpg");
+}
+#ib-3 .ib-img span{
+  background-image: url("images/islandbreeze2.jpg");
+}
+.content-box ul li article{
+  width: 100%;
+  text-align: center;
+}
+.content-box ul li article header {
+  width: 100%;
+  padding-bottom: 1em;
+  font-size: 2.5em;
+  text-transform: capitalize;
+  font-family: "Kaushan Script";
+  line-height: 1em;
+  color: #1b874f;
+}
+.content-box ul li article p{
+  font-size: 1.1em;
+  text-transform: capitalize;
+  line-height: 2em;
+}
+@media(max-width:1200px){
+  .checkpoint{
+    font-size: 16px;
+  }
+}
+@media(max-width:1000px){
+  .checkpoint {
+    font-size: 15px;
+  }
+  .content-box ul li {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+}
+@media(max-width:850px){
+  .checkpoint {
+    font-size: 14px;
+  }
+  .content-box ul li {
+    border-left: 1em solid beige;
+    border-right: 1em solid beige;
+  }
+  .content-box ul li:not(.ib-img){
+    width: auto;
+  }
+  .ib-img {
+    width: 50%;
+  }
+}
+@media(max-width:600px){
+  #ib-1 .ib-img,
+  #ib-2 .ib-img,
+  #ib-3 .ib-img{
+    display: none;
+  }
+  #ib-1 ul li article header,
+  #ib-2 ul li article header,
+  #ib-3 ul li article header{
+    padding-bottom: 0.5em;
+    line-height: 1em;
+    color: white;
+    padding-top: 3em;
+    text-align: left;
+    padding-left: 0.5em;
+    background-size: cover;
+    text-shadow: 0px 0px 5px black;
+  }
+  #ib-1 ul li article header{
+    background-image: url("images/island-breeze-banner3.jpg");
+  }
+  #ib-2 ul li article header{
+    background-image: url("images/island-breeze-courtyard-mariot-kona.jpg");
+  }
+  #ib-3 ul li article header{
+    background-image: url("images/islandbreeze2.jpg");
+  }
+  .content-box ul li {
+    display: block;
+  }
+  .content-box ul li {
+    display: block;
+    width: 24em;
+    margin: 1em auto;
+  }
+  #playerWrapper {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0);
+    width: 100%;
+    text-align: center;
+    height: 12em;
+  }
+}
+@media(max-width:400px){
+  .content-box ul li {
+    width: 90%;
+  }
+  .content-box hr {
+    background-size: cover;
+  }
+}
+/*---------*/
+.coverage-section{
+	width: 100%;
+	font-size: 18px;
+  background-color: #006185de;
+  padding-bottom: 1em;
+}
+.coverage-section article {
+  color: white;
+  font-size: 1.2em;
+  line-height: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+  text-align: center;
+  width: 50em;
+  margin: 0 auto;
+}
+@media(max-width:1020px){
+  .coverage-section article {
+    width: 100%;
+  }
+}
+.coverage-section h4{
+  color: gold !important;
+  width: 100%;
+  text-align: center;
+  font-family: "Kaushan Script";
+  font-size: 2.5em;
+  text-transform: capitalize;
+  padding: 0.25em;
+  font-weight: normal;
+}
+.coverage-box {
+  width: 40em;
+  background-color: white;
+  padding: 1em;
+  margin: 0em auto;
+  border-radius: 2em;
+  border: 1em solid rgba(255,255,255,0.33);
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+.coverage-label {
+  width: 20.5em;
+  margin: 0 auto;
+  color: white;
+  text-transform: capitalize;
+  font-size: 2em;
+  text-align: left;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+.coverage-box header{
+	text-transform: capitalize;
+	font-size: 1.25em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em
+}
+.coverage-box ul{
+	background-color: white;
+}
+.coverage-box ul li{
+	display: inline-block;
+}
+.coverage-box ul li .material-icons{
+	font-size: 2em;
+	color: green;
+}
+.coverage-box p{
+	font-size: 1.1em;
+	line-height: 2em;
+}
+@media(max-width:1040px){
+  .coverage-section{
+    font-size: 16px;
+  }
+}
+@media(max-width:900px){
+	.coverage-box{
+		width: 90%;
+	}
+}
+@media(max-width:800px){
+  .coverage-section{
+    font-size: 14px;
+  }
+}
+#CDSWIDCOE {
+  margin: 1em auto !important;
+  display: block;
+  border: 0 !important;
+}
+/*==================*/
+footer{
+  background-color: #1b874f;
+  font-size: 18px;
+}
+footer ul{
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 1em;
+}
+footer ul li{
+  padding: 2em;
+  display: table-cell;
+  vertical-align: top;
+  width: 33.3%;
+}
+footer ul li header{
+  color: gold;
+  text-transform:capitalize;
+  font-size: 1.5em;
+}
+footer p, footer a{
+  color: white;
+  text-transform:capitalize;
+  font-size: 1em;
+}
+footer a{
+  display: inline-block;
+  margin: 0.5em 0em;
+}
+.footer-left{
+  text-align: left;
+}
+.footer-center{
+  text-align: center;
+}
+.footer-right{
+  text-align: right;
+}
+@media(max-width:800px){
+  .footer-left,
+  .footer-right,
+  .footer-center{
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+}
+@media(max-width:600px){
+  footer{
+    font-size: 16px;
+  }
+}
+@media(max-width:400px){
+  footer{
+    font-size: 14px;
+  }
+}
