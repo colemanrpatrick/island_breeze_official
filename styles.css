@@ -705,6 +705,18 @@ footer a{
 .footer-right{
   text-align: right;
 }
+#social-anchor {
+  overflow: hidden;
+  position: relative;
+  width: 3em;
+  height: 3em;
+}
+#social-anchor img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
 @media(max-width:800px){
   .footer-left,
   .footer-right,
