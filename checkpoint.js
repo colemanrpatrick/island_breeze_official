@@ -31,7 +31,7 @@ window.onscroll = function(){
 
     var checkpointHeight = checkpoint[i].offsetTop - (checkpoint[i].clientHeight);
 
-    var checkpointBottom = checkpoint[i].offsetTop + (checkpoint[i].clientHeight / 1.5);
+    var checkpointBottom = checkpoint[i].offsetTop + (checkpoint[i].clientHeight);
 
     if (window.scrollY > checkpointHeight && window.scrollY < checkpointBottom) {
 
