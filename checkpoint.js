@@ -11,6 +11,15 @@ window.onload = function () {
   checkpointFirst.classList = "checkpoint-first active";
 
 }
+var checkId;
+
+for (var i = 0; i < checkpoint.length; i++) {
+
+  checkpoint[i].setAttribute('id','checkpoint-'+ i +'');
+
+  checkId = checkpoint[i].getAttribute('id');
+
+}
 
 window.onscroll = function(){
   /*=== use first checkpoint if at the very top of the page ===*/
