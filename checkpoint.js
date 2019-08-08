@@ -1,56 +1,53 @@
-// var documentHeight = document.documentElement.scrollTop || window.scrollY || window.pageYOffset || document.body.scrollTop;
-
-
-
-var checkpointFirst = document.getElementById("checkpoint-first");
-
-var checkpoint = document.getElementsByClassName("checkpoint");
-
-window.onload = function () {
-
-  checkpointFirst.classList = "checkpoint-first active";
-
-}
-var checkId;
-
-for (var i = 0; i < checkpoint.length; i++) {
-
-  checkpoint[i].setAttribute('id','checkpoint-'+ i +'');
-
-  checkId = checkpoint[i].getAttribute('id');
-
-}
+/*==================================================*/
+window.onload = function(){
+  positionSwitch();
+  checkFirstScroll();
+  checkScroll();
+};
 
 window.onscroll = function(){
-  /*=== use first checkpoint if at the very top of the page ===*/
+  positionSwitch();
+  checkFirstScroll();
+  checkScroll();
+}
 
-  var checkpointFirstBottom = checkpointFirst.clientHeight;
+var pageTop = function(){
 
-  if (window.scrollY < checkpointFirstBottom) {
+  if(!window.pageYOffset){
 
-    checkpointFirst.classList = "checkpoint-first active";
+    return document.documentElement.scrollTop || window.scrollY || document.body.scrollTop;
 
   }else{
 
-    checkpointFirst.classList = "checkpoint-first";
+    return window.pageYOffset;
 
   }
-  /*=== ===*/
-  for (var i = 0; i < checkpoint.length; i++) {
+};
 
-    var checkpointHeight = checkpoint[i].offsetTop - (checkpoint[i].clientHeight);
+//=============================================== book now scroll method ==
+var bookNow = document.getElementById('book-now');
 
-    var checkpointBottom = checkpoint[i].offsetTop + (checkpoint[i].clientHeight);
+var $paddingTop = function() {
 
-    if (window.scrollY > checkpointHeight && window.scrollY < checkpointBottom) {
+    bookNow.clientHeight
 
-      checkpoint[i].classList = "checkpoint active";
+}
 
-    }else{
+var $scrollTop = bookNow.offsetTop;
 
-      checkpoint[i].classList = "checkpoint";
+function positionSwitch(){
+
+  console.log("scrolling");
+
+    if (pageTop() > $scrollTop) {
+
+      bookNow.className = "fixed";
+
+    } else {
+
+      bookNow.className = "static";
+      //
 
     }
 
-  }
 }
